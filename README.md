@@ -24,9 +24,13 @@ For other versions of Blender, you can modify the configuration accordingly.
 
 To run the example image generation for a sphere object, use the following command
 ```
-python $(Project_Folder_Path)/run_script.py
+$(Blender_4.1_Path)/bin/blender --python $(Project_Folder_Path)/run_script.py
 ```
 To run the image generation for the Blender blast project, use the following command
+```
+$(Blender_4.1_Path)/bin/blender --python ./render_blast.py
+```
+Or alternatively, change the blender path to your installation path in the *$(Project_Folder_Path)/scripts/run_blast_script.sh* and run
 ```
 /bin/bash $(Project_Folder_Path)/scripts/run_blast_script.sh
 ```
