@@ -8,7 +8,8 @@ import mathutils
 
 import os
 
-sys.path.insert(0, '/home/jzhang72/PycharmProjects/blasts_w_blender')
+sys.path.insert(0, os.path.join(os.getcwd(), "../"))
+print(os.path.join(os.getcwd(), "../"))
 from scripts.simple_sphere import rainbow_lights
 
 # Check if script is executed in Blender and get absolute path of current folder
@@ -40,7 +41,7 @@ blend_file_path = filesDir + '/' + '../projects/blast_final.blend'
 bpy.ops.wm.open_mainfile(filepath=blend_file_path)
 ''''''
 
-'''Built-in object'''
+'''Built-in Suzanne object'''
 # bpy.ops.mesh.primitive_monkey_add(
 #     size=2.0, calc_uvs=True, enter_editmode=False, align='WORLD',
 #     location=(0.0, 0.0, 0.0), rotation=(0.0, 0.0, 0.0),
@@ -90,15 +91,11 @@ for d in bpy.context.preferences.addons["cycles"].preferences.devices:
 
 # set camera locations
 radius = 2.0
-camera_locations = {
-    0: (1.0, -radius, 1.0),
-    1: (0, -radius, 1.0)
-}
 
 focus_point = mathutils.Vector((0.0, 0.0, 0.0))  # set to the 3D position of the object
 frames = range(12, 20)  # frames = range(bpy.context.scene.frame_start, bpy.context.scene.frame_end)
-for el in range(0, 91, 45):  # (0, 91, 45)
-    for az in range(0, 360, 45):  # (0, 360, 45)
+for el in range(0, 1, 45):  # (0, 91, 45)
+    for az in range(0, 1, 45):  # (0, 360, 45)
         el_rad = el / 180.0 * np.pi
         az_rad = az / 180.0 * np.pi
         z = radius * sin(el_rad)
