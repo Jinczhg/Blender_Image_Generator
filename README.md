@@ -28,7 +28,7 @@ $(Blender_4.1_Path)/bin/blender --python $(Project_Folder_Path)/run_script.py
 ```
 To run the image generation for the Blender blast project, use the following command
 ```
-$(Blender_4.1_Path)/bin/blender --python ./render_blast.py
+$(Blender_4.1_Path)/bin/blender --python $(Project_Folder_Path)/render_blast.py
 ```
 Or alternatively, change the blender path to your installation path in the *$(Project_Folder_Path)/scripts/run_blast_script.sh* and run
 ```
