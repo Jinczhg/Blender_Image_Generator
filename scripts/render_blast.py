@@ -8,7 +8,7 @@ import mathutils
 
 import os
 
-sys.path.insert(0, os.path.join(os.getcwd(), "../"))
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "../"))
 print(os.path.join(os.getcwd(), "../"))
 from scripts.simple_sphere import rainbow_lights
 
