@@ -1,1 +1,1 @@
- /home.md1/server/STTR_Wind_Control/blender-4.1/bin/blender --python ./render_images.py
+ $(Change_To_Your_Own_Blender_4.1_Path)/bin/blender --python ./render_images.py
