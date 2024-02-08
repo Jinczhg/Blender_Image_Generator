@@ -34,40 +34,39 @@ camera.rotation_euler = mathutils.Euler((pi / 2, 0, 0), 'XYZ')
 # Make this the current camera
 bpy.context.scene.camera = camera
 
-'''Blast'''
-blend_file_path = filesDir + '/' + '../projects/blast_final.blend'
-
-# Load the .blend file
-bpy.ops.wm.open_mainfile(filepath=blend_file_path)
+'''Load a Blender Project (XXX.blend)'''
+# load a blender project
+# blend_file_path = filesDir + '/' + '../projects/XXX.blend'
+# bpy.ops.wm.open_mainfile(filepath=blend_file_path)
 ''''''
 
-'''Built-in Suzanne object'''
-# bpy.ops.mesh.primitive_monkey_add(
-#     size=2.0, calc_uvs=True, enter_editmode=False, align='WORLD',
-#     location=(0.0, 0.0, 0.0), rotation=(0.0, 0.0, 0.0),
-#     scale=(0.0, 0.0, 0.0))
-# obj = bpy.context.object
-#
-# # Add subsurf modifier
-# modifier = obj.modifiers.new('Subsurf', 'SUBSURF')
-# modifier.levels = 2
-# modifier.render_levels = 2
-#
-# # Smooth surface
-# for p in obj.data.polygons:
-#     p.use_smooth = True
-#
-# # Add Glossy BSDF material
-# mat = bpy.data.materials.new('Material')
-# mat.use_nodes = True
-# node = mat.node_tree.nodes[0]
-# node.inputs[0].default_value = (0.8, 0.8, 0.8, 1)  # Base color
-# node.inputs[4].default_value = 0.5  # Metalic
-# node.inputs[7].default_value = 0.5  # Roughness
-# obj.data.materials.append(mat)
-#
-# # Create lamps
-# rainbow_lights(5, 100, 2, energy=100)
+'''Load the Built-in Suzanne object'''
+bpy.ops.mesh.primitive_monkey_add(
+    size=2.0, calc_uvs=True, enter_editmode=False, align='WORLD',
+    location=(0.0, 0.0, 0.0), rotation=(0.0, 0.0, 0.0),
+    scale=(0.0, 0.0, 0.0))
+obj = bpy.context.object
+
+# Add subsurf modifier
+modifier = obj.modifiers.new('Subsurf', 'SUBSURF')
+modifier.levels = 2
+modifier.render_levels = 2
+
+# Smooth surface
+for p in obj.data.polygons:
+    p.use_smooth = True
+
+# Add Glossy BSDF material
+mat = bpy.data.materials.new('Material')
+mat.use_nodes = True
+node = mat.node_tree.nodes[0]
+node.inputs[0].default_value = (0.8, 0.8, 0.8, 1)  # Base color
+node.inputs[4].default_value = 0.5  # Metalic
+node.inputs[7].default_value = 0.5  # Roughness
+obj.data.materials.append(mat)
+
+# Create lamps
+rainbow_lights(5, 100, 2, energy=100)
 ''''''
 
 bpy.context.scene.render.resolution_x = 640

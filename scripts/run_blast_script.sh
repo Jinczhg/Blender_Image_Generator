@@ -1,1 +1,0 @@
- /home.md1/server/STTR_Wind_Control/blender-4.1/bin/blender --python ./render_blast.py
