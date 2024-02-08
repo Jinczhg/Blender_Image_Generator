@@ -114,7 +114,7 @@ for el in range(0, 1, 45):  # (0, 91, 45)
             bpy.context.scene.frame_set(frame)
 
             bpy.context.scene.render.image_settings.file_format = 'PNG'
-            bpy.context.scene.render.filepath = (filesDir + '/' + '../outputs/blast/' + "r_{}_az_{}_el_{}".format(radius, az, el)
+            bpy.context.scene.render.filepath = (filesDir + '/' + '../outputs/Suzanne/' + "r_{}_az_{}_el_{}".format(radius, az, el)
                                                  + "/frame_" + str(frame).zfill(4) + '.png')
 
             # set animation to True for saving the entire animation, otherwise it will only save the specified frame
