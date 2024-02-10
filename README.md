@@ -28,9 +28,8 @@ To run the image generation from observation pose on a hemisphere surface, use t
 ```
 $(Blender_4.1_Path)/bin/blender --python $(Project_Folder_Path)/render_images.py
 ```
-Or alternatively, change the blender path to your installation path in the *$(Project_Folder_Path)/scripts/run_blast_script.sh* and run
+Or alternatively, change the blender path to your installation path in the *$(Project_Folder_Path)/scripts/run_rendering_script.sh* and run
 ```
 /bin/bash $(Project_Folder_Path)/scripts/run_rendering_script.sh
 ```
-In *$(Project_Folder_Path)/scripts/render_blast.py*, comment in line 44-69 if you want to render a Suzanne monkey object (static) instead of the provide blast.
-Camera pose can be changed by modifying line 92 (observation radius), 96 (elevation), and 97 (azimuth).
+In *$(Project_Folder_Path)/scripts/render_images.py*, camera pose can be changed by modifying line 92 (observation radius), 96 (elevation), and 97 (azimuth).
